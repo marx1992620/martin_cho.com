@@ -7,11 +7,16 @@
   <body>
     <h1>覺得厲害!!</h1>
     <p> hello </p>
-    <button class="test">off</button>
+    <button id="btn-test" onclick='document.getElementsByTagName("p")[0].innerHTML-"hi hi hi"'>off</button>
   </body>
 
   <script>
-    element = document.getElementsByClassName("test")
-    element.textContent = "on"
+    var button = document.getElementById('btn-test');
+    button2.addEventListener('click', function (event) {
+            
+            setTimeout(() => {
+                window.location.href="startup_status"
+            }, 200);
+        });
   </script>
 </html>
