@@ -570,7 +570,7 @@ progress {
 }
 
 .list-inline-item {
-  font-size: 16px;
+  font-size: 18px;
   display: inline-block;
 }
 .list-inline-item:not(:last-child) {
