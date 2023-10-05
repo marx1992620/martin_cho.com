@@ -267,7 +267,7 @@
                                     </li>
                                     <li style="font-size: 16px;">
                                         <span class="fa-li"></span>
-                                        Exploring Data (Statistics) --------------------------------- Data Source View
+                                        Exploring Data (Statistics) ------------------------------------ Data Source View
                                     </li>
                                     <li style="font-size: 16px;">
                                         <span class="fa-li"></span>
@@ -279,7 +279,7 @@
                                     </li>
                                     <li style="font-size: 16px;">
                                         <span class="fa-li"></span>
-                                        Deploying and Updating Models ------------------------------- Automation and Integration
+                                        Deploying and Updating Models ----------------------------- Automation and Integration
                                     </li>
                                 </ol>
                             </td>
@@ -331,15 +331,15 @@
                     <ul class="fa-ul mb-0">
                         <li>
                             <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            <a href="/attachment/automatical web crawler and price estimation_report.pdf" type="application/pdf" onclick="window.open(config='height=500,width=500');">Automatically crawling job descriptions from the 104 website</a><span> - automatic crawling job descriptions from the 104 website  with specific address location and summarizing related skills.</span> 
+                            <a class="fullwin" href="/attachment/automatical web crawler and price estimation_report.pdf" type="application/pdf" onclick="window.open(config='height=500,width=500');">Automatically crawling job descriptions from the 104 website</a><span> - automatic crawling job descriptions from the 104 website  with specific address location and summarizing related skills.</span> 
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            <a href="/attachment/automatical web crawler and price estimation_report.pdf" onclick="window.open(config='height=500,width=500');">Valuation (Regression) model of used cars</a><span> - estimating the market value of used cars by MAPE 6.64%. - estimating the market value of used cars by MAPE 6.64%.</span> 
+                            <a href="/attachment/automatical web crawler and price estimation_report.pdf" onclick="openInFullScreenWin(this.href);return false">Valuation (Regression) model of used cars</a><span> - estimating the market value of used cars by MAPE 6.64%. - estimating the market value of used cars by MAPE 6.64%.</span> 
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            <a href="/attachment/automatical web crawler and price estimation_report.pdf" onclick="window.open(config='height=500,width=500');">Vehicle model of visual recognition (CNN) model</a><span> - identifying the vehicle model by exterior photos by accuracy 95%. (Python/Tensorflow/Keras/OpenCV)</span>
+                            <a id="pdfLink" href="/attachment/automatical web crawler and price estimation_report.pdf" onclick="window.open(config='height=500,width=500');">Vehicle model of visual recognition (CNN) model</a><span> - identifying the vehicle model by exterior photos by accuracy 95%. (Python/Tensorflow/Keras/OpenCV)</span>
                         </li>
                     </ul>
                 </div>
@@ -361,5 +361,22 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script>
+            $(document).on('click', '.fullwin', function() {
+                openInFullScreenWin(this.href);
+                return false;
+            });
+            document.getElementById('pdfLink').addEventListener('click', function(e) {
+				openInFullScreenWin(e.target.href);
+				e.preventDefault();
+			});
+			function openInFullScreenWin(url) {
+				window.open(url, '_blank', 'popup=yes,top=' + screen.availTop + 
+					',left=' + screen.availLeft + 
+					',width=' + screen.availWidth + 
+					',height=' + screen.availHeight);
+			}
+        </script>
+
     </body>
 </html>
