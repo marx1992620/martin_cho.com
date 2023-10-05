@@ -275,36 +275,6 @@
                             Deploying and Updating Models ----------------------------- Automation and Integration
                         </li>
                     </ul>
-
-                            <!-- <td style="width: 100px;"></td>
-                            <td style="vertical-align:text-top;">
-                                <div class="subheading mb-2">Analysis Workflow</div>
-                                <ul class="fa-ul mb-0">
-                                    <li style="font-size: 16px;">
-                                        <span class="fa-li"><i class="fas fa-check"></i></span>
-                                        Defining the Problem (Hypothesis)
-                                    </li>
-                                    <li style="font-size: 16px;">
-                                        <span class="fa-li"><i class="fas fa-check"></i></span>
-                                        Automation and Integration: Preparing the Data (data ETL/ Statistics)
-                                    </li>
-                                    <li style="font-size: 16px;">
-                                        <span class="fa-li"><i class="fas fa-check"></i></span>
-                                        Data Source View: Exploring Data (Statistics)
-                                    </li>
-                                    <li style="font-size: 16px;">
-                                        <span class="fa-li"><i class="fas fa-check"></i></span>
-                                        Data Mining: Building Models (Select model/ ML/ DL)
-                                    </li>
-                                    <li style="font-size: 16px;">
-                                        <span class="fa-li"><i class="fas fa-check"></i></span>
-                                        Data Mining: Validating Models (Validation/ Estimation/ Fine-tune)
-                                    </li>
-                                    <li style="font-size: 16px;">
-                                        <span class="fa-li"><i class="fas fa-check"></i></span>
-                                        Automation and Integration: Deploying and Updating Models 
-                                    </li>
-                                </ul> -->
                 </div>
             </section>
             <hr class="m-0" />
@@ -317,6 +287,7 @@
                             <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
                             <a class="fullwin" href="https://github.com/marx1992620/marx1992620.github.io/blob/master/attachment/automatical%20web%20crawler%20and%20price%20estimation_report.pdf">Automatically crawling job descriptions from the 104 website</a><span> - automatic crawling job descriptions from the 104 website  with specific address location and summarizing related skills.</span> 
                         </li>
+                        [pdf-embedder url="http://www.hischool.com.tw/wp-content/uploads/doc/user_guide/106 學年北區五專聯合免試入學簡章.pdf"]
                         <li>
                             <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
                             <a href="https://github.com/marx1992620/marx1992620.github.io/blob/master/attachment/automatical%20web%20crawler%20and%20price%20estimation_report.pdf" onclick="openInFullScreenWin(this.href);return false">Valuation (Regression) model of used cars</a><span> - estimating the market value of used cars by MAPE 6.64%. - estimating the market value of used cars by MAPE 6.64%.</span> 
@@ -355,11 +326,10 @@
 				e.preventDefault();
 			});
 			function openInFullScreenWin(url) {
-				window.open(url, '_blank', 'popup=yes,top=' + screen.availTop + 
-					',left=' + screen.availLeft + 
-					',width=' + screen.availWidth + 
-					',height=' + screen.availHeight);
-			}
+				var newTab = window.open(url, '_blank');
+            newTab.location;
+            }
+
         </script>
 
     </body>
