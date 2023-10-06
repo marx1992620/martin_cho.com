@@ -10925,7 +10925,7 @@ p.lead {
 .social-icons .social-icon {
   display: inline-flex;
   align-items: center;
-  justify-content: left;
+  justify-content: center;
   height: 2rem;
   width: 2rem;
   background-color: #495057;
