@@ -322,7 +322,7 @@
 
             function openNewWindow() {
                 // 打開新視窗，顯示不同的HTML內容
-                var newWindow = window.open('', '_blank', 'width=1000, height=700');
+                var newWindow = window.open('', '_blank', 'width=1100, height=700');
                 // var newContent = '<html><head><title>Daily Report</title></head><body><h1>這是新的HTML內容</h1><p>歡迎來到新的內容。</p><button onclick="window.close()">關閉視窗</button></body></html>';
                 var newContent = `
                 <!DOCTYPE html><html lang="en"><head>
@@ -357,19 +357,19 @@
                     This is a daily report from 2023/07/12 08:00 to 2023/07/11 08:00 of daily output, UPH and top 10 issues of downtime and down count.</p>
 
                     <h2><b>Daily Output:</b></h2>
-                    <img src="assets/img/daily_output.png" style="width: 800px; height: 500px;" alt="Daily Output Image"><br>
+                    <img src="assets/img/daily_output.png" style="width: 900px; height: 500px;" alt="Daily Output Image"><br>
                     <br><br>
                     <h2><b>Daily UPH with Downtime:</b></h2>
-                    <h4>　Production Line: product_line1:</h4><img src="assets/img/uph_line1.png" style="width: 950px; height: 600px;" alt="Daily Output Image"><br>
-                    <h4>　Production Line: product_line2:</h4><img src="assets/img/uph_line2.png" style="width: 950px; height: 600px;" alt="Daily Output Image"><br>
+                    <h4>　Production Line: < product_line_1 ></h4><img src="assets/img/uph_line1.png" style="width: 1000px; height: 600px;" alt="Daily Output Image"><br>
+                    <h4>　Production Line: < product_line_2 ></h4><img src="assets/img/uph_line2.png" style="width: 1000px; height: 600px;" alt="Daily Output Image"><br>
                     <br><br>
                     <h2><b>Daily Top 10 Issues of Downtime of Cell Type:</b></h2>
-                    <h4>　Production Line: product_line1:</h4><img src="assets/img/downtime_line1.png" style="width: 850px; height: 1200px;" alt="Daily UPH Timeseries Image"><br>
-                    <h4>　Production Line: product_line2:</h4><img src="assets/img/downtime_line2.png" style="width: 850px; height: 1200px;" alt="Daily UPH Timeseries Image"><br>
+                    <h4>　Production Line: < product_line_1 ></h4><img src="assets/img/downtime_line1.png" style="width: 800px; height: 1200px;" alt="Daily UPH Timeseries Image"><br>
+                    <h4>　Production Line: < product_line_2 ></h4><img src="assets/img/downtime_line2.png" style="width: 800px; height: 1200px;" alt="Daily UPH Timeseries Image"><br>
                     <br><br>
                     <h2><b>Daily Top 10 Issues of Down Count of Cell Type:</b></h2>
-                    <h4>　Production Line: product_line1:</h4><img src="assets/img/down_count_line1.png" style="width: 850px; height: 1200px;" alt="Daily M/C Downtime Image"><br>
-                    <h4>　Production Line: product_line2:</h4><img src="assets/img/down_count_line2.png" style="width: 850px; height: 1200px;" alt="Daily M/C Downtime Image"><br>
+                    <h4>　Production Line: < product_line_1 ></h4><img src="assets/img/down_count_line1.png" style="width: 800px; height: 1200px;" alt="Daily M/C Downtime Image"><br>
+                    <h4>　Production Line: < product_line_2 ></h4><img src="assets/img/down_count_line2.png" style="width: 800px; height: 1200px;" alt="Daily M/C Downtime Image"><br>
 
                     <p>Regards,<br>
                     Martin.</p>
