@@ -320,29 +320,81 @@
         <script src="js/scripts.js"></script>
         <script>
 
-            // function openNewWindow() {
-            //     // 打開新視窗，顯示不同的HTML內容
-            //     var newWindow = window.open('', '_blank', 'width=800, height=600');
-            //     var newContent = '<html><head><title>Daily Report</title></head><body><h1>這是新的HTML內容</h1><p>歡迎來到新的內容。</p><button onclick="window.close()">關閉視窗</button></body></html>';
-            //     newWindow.document.open();
-            //     newWindow.document.write(newContent);
-            //     newWindow.document.close();
-            // }
             function openNewWindow() {
-            var newWindow = window.open('', '_blank', 'width=800, height=600');
-            // 使用XMLHttpRequest來獲取本地HTML文件的內容
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'daily_report.html', true);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    var newContent = xhr.responseText;
-                    newWindow.document.open();
-                    newWindow.document.write(newContent);
-                    newWindow.document.close();
-                }
-            };
-            xhr.send();
-        }
+                // 打開新視窗，顯示不同的HTML內容
+                var newWindow = window.open('', '_blank', 'width=800, height=600');
+                // var newContent = '<html><head><title>Daily Report</title></head><body><h1>這是新的HTML內容</h1><p>歡迎來到新的內容。</p><button onclick="window.close()">關閉視窗</button></body></html>';
+                var newContent = `
+                <!DOCTYPE html><html lang="en"><head>
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+                    <title>Document</title>
+                </head>
+                <style>
+                    p{
+                    font-size: 18px;
+                    }
+                    table {
+                    font-size: 8px;
+                    font-family: arial, sans-serif;
+                    border-collapse: collapse;
+                    width: 100%;
+                    }
+                    
+                    td, th {
+                    border: 1px solid #dddddd;
+                    text-align: left;
+                    padding: 8px;
+                    /* width: 60px; */
+                    }
+                    
+                    tr:nth-child(even) {
+                    background-color: #dddddd;
+                    }
+                </style>
+                <body>
+                    <p>Hi All,<br><br>
+                    This is a daily report from 2023/03/09 08:00 to 2023/03/10 08:00 of daily output, UPH and top 10 issues of downtime and down frequency.</p>
+
+                    <h2><b>Daily Output:</b></h2>
+                    <img src="https://github.com/marx1992620/marx1992620.github.io/blob/master/assets/img/daily_output.png" alt="Daily Output Image"><br>
+                    <br><br>
+                    <h2><b>Daily UPH and Downtime:</b></h2>
+                    <h4>　Production Line: product_line1:</h4><img src="https://github.com/marx1992620/marx1992620.github.io/blob/master/assets/img/uph_line1.png" alt="Daily Output Image"><br>
+                    <h4>　Production Line: product_line2:</h4><img src="https://github.com/marx1992620/marx1992620.github.io/blob/master/assets/img/uph_line2.png" alt="Daily Output Image"><br>
+                    <br><br>
+                    <h2><b>Daily Top 10 Issues of Downtime of Cell Type:</b></h2>
+                    <h4>　Production Line: product_line1:</h4><img src="https://github.com/marx1992620/marx1992620.github.io/blob/master/assets/img/downtime_line1.png" alt="Daily UPH Timeseries Image"><br>
+                    <h4>　Production Line: product_line2:</h4><img src="https://github.com/marx1992620/marx1992620.github.io/blob/master/assets/img/downtime_line2.png" alt="Daily UPH Timeseries Image"><br>
+                    <br><br>
+                    <h2><b>Daily Top 10 Issues of Down Count of Cell Type:</b></h2>
+                    <h4>　Production Line: product_line1:</h4><img src="https://github.com/marx1992620/marx1992620.github.io/blob/master/assets/img/down_count_line1.png" alt="Daily M/C Downtime Image"><br>
+                    <h4>　Production Line: product_line2:</h4><img src="https://github.com/marx1992620/marx1992620.github.io/blob/master/assets/img/down_count_line2.png" alt="Daily M/C Downtime Image"><br>
+
+                    <p>Regards,<br>
+                    Martin.</p>
+                </body>
+                </html>
+                `
+                newWindow.document.open();
+                newWindow.document.write(newContent);
+                newWindow.document.close();
+            }
+        //     function openNewWindow() {
+        //     var newWindow = window.open('', '_blank', 'width=800, height=600');
+        //     // 使用XMLHttpRequest來獲取本地HTML文件的內容
+        //     var xhr = new XMLHttpRequest();
+        //     xhr.open('GET', 'https://github.com/marx1992620/marx1992620.github.io/blob/master/daily_report.html', true);
+        //     xhr.onreadystatechange = function() {
+        //         if (xhr.readyState === 4 && xhr.status === 200) {
+        //             var newContent = xhr.responseText;
+        //             newWindow.document.open();
+        //             newWindow.document.write(newContent);
+        //             newWindow.document.close();
+        //         }
+        //     };
+        //     xhr.send();
+        // }
 			function openInTabWin(url) {
 				var newTab = window.open(url, '_blank');
             newTab.location;
