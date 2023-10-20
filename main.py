@@ -18,14 +18,9 @@ app.mount("/attachment", StaticFiles(directory="attachment"), name="attachment")
 
 @app.get("/", response_class=HTMLResponse)
 def read_root():
-    with open("index.html", "r") as file:
+    with open("index.html", "r", encoding='utf-8') as file:
         html_content = file.read()
     return html_content
-
-# Import API routers
-# from api import router as api_router
-
-# app.include_router(api_router)
 
 
 if __name__ == "__main__":

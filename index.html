@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Resume - Start Bootstrap Theme</title>
+        <title>Martin Profile</title>
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -78,7 +78,8 @@
                                 <a href="https://github.com/marx1992620/WarningSystem/blob/main/README.md" onclick="openInTabWin(this.href);return false">
                                 - Developing customized warning system to monitor real-time data.</a><br/>
                                 - Set up an integration pipeline and infrastructure to handle concurrency and retry issues.<br/>
-                                - Developed automated data reports including data analysis, data visualization, and trend charts.<br/>
+                                <a href="#experience" onclick="openNewWindow()">
+                                - Developed automated data reports including data analysis, data visualization, and trend charts.</a><br/>
                                 - Set up microservices, such as monitoring the database with Docker.
                                 </p>
                         </div>
@@ -295,7 +296,7 @@
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            <a href="" onclick="openInTabWin(this.href);return false">Vehicle model of visual recognition (CNN) model</a><span> - identifying the vehicle model by exterior photos by accuracy 95%. (Python/Tensorflow/Keras/OpenCV)</span>
+                            <a href="#sideprojects" onclick="openInTabWin(this.href);return false">Vehicle model of visual recognition (CNN) model</a><span> - identifying the vehicle model by exterior photos by accuracy 95%. (Python/Tensorflow/Keras/OpenCV)</span>
                         </li>
                     </ul>
                 </div>
@@ -318,6 +319,30 @@
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
         <script>
+
+            // function openNewWindow() {
+            //     // 打開新視窗，顯示不同的HTML內容
+            //     var newWindow = window.open('', '_blank', 'width=800, height=600');
+            //     var newContent = '<html><head><title>Daily Report</title></head><body><h1>這是新的HTML內容</h1><p>歡迎來到新的內容。</p><button onclick="window.close()">關閉視窗</button></body></html>';
+            //     newWindow.document.open();
+            //     newWindow.document.write(newContent);
+            //     newWindow.document.close();
+            // }
+            function openNewWindow() {
+            var newWindow = window.open('', '_blank', 'width=800, height=600');
+            // 使用XMLHttpRequest來獲取本地HTML文件的內容
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'daily_report.html', true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var newContent = xhr.responseText;
+                    newWindow.document.open();
+                    newWindow.document.write(newContent);
+                    newWindow.document.close();
+                }
+            };
+            xhr.send();
+        }
 			function openInTabWin(url) {
 				var newTab = window.open(url, '_blank');
             newTab.location;
